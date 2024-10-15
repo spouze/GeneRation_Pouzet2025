@@ -1,6 +1,6 @@
 # GeneRation software for Pouzet2024
 
-This repository contains codes for the Wagner's model-derived model of Gene Regulatory Networks Evolution used in [Pouzet & Le Rouzic 2024](): "Gene network topology drives the mutational landscape of gene expression".
+This repository contains codes for the Wagner's model-derived model of Gene Regulatory Networks Evolution used in [Pouzet & Le Rouzic 2024](https://github.com/spouze/GeneRation_Pouzet2024/): "Gene network topology drives the mutational landscape of gene expression".
 
 ### You will find
 - The movies
