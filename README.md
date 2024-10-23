@@ -5,20 +5,22 @@ This repository contains codes for the modified Wagner's model of Gene Regulator
 ### Files
 - `Launch_GeneRation.R` - The Launcher for adaptation in a single environment
 - `GeneRation_Fun_v1.R` - Functions, heart of the program
-- Suite of R scripts for data analyses (see Folder)
+- Suite of R scripts for data analyses (`data_analysis_scripts` folder)
+- Parameter files used for the paper (`parameter_files` folder)
 
 ### Packages required
-All carried ou  on R version 4.04 (R Core Team 2021)
+This work was carried out on R version 4.04 (R Core Team 2021)
 - `rlist` (v0.4.6.2) - save and load simulations
 - `RColorBrewer` (v1.1.2) - color generation
 - `igraph` (v1.2.10) - display networks
 
 ### Simple launch
+with `Launch_GeneRation.R` and `GeneRation_Fun_v1.R` in the same folder.
 ```
 ./Launch_GeneRation.R
 ```
 will launch a stand-alone default simulation. </br>
-will return a dated folder MMDD_HHMMSS_simulation containing 8 files:
+will return a dated folder `MMDD_HHMMSS_simulation` containing 8 files:
 - `MMDD_HHMMSS_simulation.00.graphall.png` - Various graphs summarizing the evolution using the population mean: fitness, phenotype and genotype (regulatory and coding).
 - `MMDD_HHMMSS_simulation.01.WInit.png` - Initial mean individual's genotype (table and network)
 - `MMDD_HHMMSS_simulation.02.WFinal.png` - Evolved mean individual's genotype (table and network)
