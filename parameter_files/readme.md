@@ -27,7 +27,7 @@
 | GENET_CLONAL             | 0.0                                                           | NOT USED                                            |
 | GENET_PLOIDY             | 2                                                             | NOT USED - hardcoded to 2 (diploid)                                     |
 | GENET_EPIGENET           | 0.0                                                           | NOT USED                                    |
-| FITNESS_TYPE             | gaussian                                                      | NOT USED - hard coded to gaussian                                      |
+| FITNESS_TYPE             | gaussian                                                      | NOT USED - hardcoded to gaussian                                      |
 | INIT_CONNECT             | 1                                                             | NOT USED                                 |
 | TYPE_SO                  | basal                                                         | NOT USED                             |
 | FITNESS_STAB             | exponential_stab                                              | NOT USED                              |
