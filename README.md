@@ -4,7 +4,6 @@ This repository contains codes for the modified Wagner's model of Gene Regulator
 
 ### Files
 - `Launch_GeneRation.R` - The Launcher for adaptation in a single environment
-- `Launch_BurninGeneRation.R` - The Launcher for two simulations: adaptation in two successive environements
 - `GeneRation_Fun_v1.R` - Functions, heart of the program
 - Suite of R scripts for data analyses (see Folder)
 
@@ -34,27 +33,30 @@ Note that all launch parameters are independant and facultative.
 ```
 ./Launch_GeneRation.R -p param_file -o output_name -ipop MMDD_HHMMSS_simulation.finalpop.rds
 ```
-- `-p` for the specific parameter file to be used
-- `-o` for the specified output name
-- `-ipop` for a specific .rds population to use as first generation for the subsequent evolution (often the final population of another simulation)
-- `-fun`, with the default being `GeneRation_Fun_v1.R`.
+- `-p` for the specific parameter file to be used - default is generated automatically, 5 genes, 2 under selection, 100 generations for a population of 100 individuals.
+- `-o` for the specified output name - default is "simulation".
+- `-ipop` for a specific .rds population to use as first generation for the subsequent evolution (often the final population of another simulation) - default is a automatically generated heterogeneous (non-clonal) population.
+- `-fun` for a specific functions' file - default is `GeneRation_Fun_v1.R`.
 
- 
-### Parameter file
+
+### Other notes
+- Parameter files detail: see "parameter_files" folder.
+- Reproduction of the results / data pipeline : see "data_analysis_scripts" folder
 - Use `RANDOM` for random optima
 - Launch Burnin - using `Launch_BurninGeneRation.R`: a first simulation is launched, then two expression optima are changed in a new param files (new second environment) and a new folder is created in the very folder containing the simulation for adaptation to the first environment.
+- `Launch_BurninGeneRation.R` - The Launcher for two simulations: adaptation in two successive environements
 
 ---
 
 ### Reproduction of the results:
-In parenthesis are the corresponding script numbers.
+In parenthesis are the corresponding R script numbers.
 - Launch simulations - (serialize using `launcher_generator.R`)
 - Extract simu features (`022`)
-- Isolate successful ()
-- Count degree 
+- Isolate successful (``)
+- Count degree (``)
 - FIG01: check and plot simu, fit and plot degree (`099`)
 - FIG02: compare adaptation profiles (`103`)
-- Carry out mutation tests
+- Carry out mutation tests (``)
 - FIG03: Plot fitness effects (`115`)
 - FIG04: Plot cis-effects and pleiotropy (`182`)
 - FIG05: Enrichment analysis (`171`)
