@@ -3,8 +3,8 @@
 | Parameter               | Value                                                         | Details                                                   |
 |-------------------------|---------------------------------------------------------------|-----------------------------------------------------------|
 | SIMUL_GENER              | 1000                                                          | Number of simulation generations                           |
-| INIT_PSIZE               | 1000                                                          | Initial population size                                    |
-| GENET_NBLOC              | 10                                                            | Number of genetic loci (genes)                             |
+| INIT_PSIZE               | 1000                                                          | Population size                                    |
+| GENET_NBLOC              | 10                                                            | Number of genes                             |
 | INIT_BASAL               | 0.2                                                           | Basal initial condition value (constitutive expression)                              |
 | INIT_CLONAL              | clonal                                                        | Indicates if the population is clonal or not (use "notclonal" for not clonal)               |
 | INIT_CONDIAG             | 0                                                             | Initial and diagonal condition. If zero, will always remain zero, thus preventing autoregulation   |
