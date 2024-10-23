@@ -30,7 +30,6 @@ will return a dated folder MMDD_HHMMSS_simulation containing:
 - `MMDD_HHMMSS_simulation.table` - Generation by generation evolution table summary 
 
 
-
 ### Specific launch
 ```
 ./Launch_GeneRation.R -p param_file -o output_name -ipop MMDD_HHMMSS_simulation.finalpop.rds
@@ -42,7 +41,22 @@ will return a dated folder MMDD_HHMMSS_simulation containing:
 ### Parameter file
 - Use `RANDOM` for random optima
 
-### Burnin
+---
+
+### Reproduction of the results:
+In parenthesis are the corresponding script numbers.
+- Launch Burnin
+- Extract simu features (022)
+- Isolate successful
+- Count degree 
+- FIG01: check and plot simu, fit and plot degree (099)
+- FIG02: compare adaptation profiles (103)
+- Carry out mutation tests
+- FIG03: Plot fitness effects (115)
+- FIG04: Plot cis-effects and pleiotropy (182)
+- FIG05: Enrichment analysis (171)
+
+---
 
 ### License
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />Ce(tte) œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International</a>.
