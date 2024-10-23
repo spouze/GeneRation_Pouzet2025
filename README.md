@@ -5,7 +5,7 @@ This repository contains codes for the modified Wagner's model of Gene Regulator
 ### Files
 - `Launch_GeneRation.R` - The Launcher for adaptation in a single environment
 - `Launch_BurninGeneRation.R` - The Launcher for two simulations: adaptation in two successive environements
-- `GeneRation_Fun.R` - Functions, heart of the program
+- `GeneRation_Fun_v1.R` - Functions, heart of the program
 - Suite of R scripts for data analyses (see Folder)
 
 ### Packages required
@@ -18,26 +18,28 @@ All carried ou  on R version 4.04 (R Core Team 2021)
 ```
 ./Launch_GeneRation.R
 ```
-will launch a stand-alone default simulation
-will return a dated folder MMDD_HHMMSS_simulation containing:
-- `MMDD_HHMMSS_simulation.00.graphall.png` - Various graphs summarizing the evolution         
-- `MMDD_HHMMSS_simulation.01.WInit.png` - Initial genotype (table and network)             
-- `MMDD_HHMMSS_simulation.01.WInit.png` - Evolved genotype (table and network)             
-- `MMDD_HHMMSS_simulation.03.WFinale_Kinetics.png` - Evolved devlopment and phenotype                 
-- `MMDD_HHMMSS_simulation.finalpop.rds` - Evolved final population Rlist                   
-- `MMDD_HHMMSS_simulation.initialpop.rds` - Initial final population Rlist                   
-- `MMDD_HHMMSS_simulation.param` - Parameter file used for evolution                
-- `MMDD_HHMMSS_simulation.table` - Generation by generation evolution table summary 
-
+will launch a stand-alone default simulation. </br>
+will return a dated folder MMDD_HHMMSS_simulation containing 8 files:
+- `MMDD_HHMMSS_simulation.00.graphall.png` - Various graphs summarizing the evolution using the population mean: fitness, phenotype and genotype (regulatory and coding).
+- `MMDD_HHMMSS_simulation.01.WInit.png` - Initial mean individual's genotype (table and network)
+- `MMDD_HHMMSS_simulation.02.WFinal.png` - Evolved mean individual's genotype (table and network)
+- `MMDD_HHMMSS_simulation.03.WFinale_Kinetics.png` - Evolved mean individual development and phenotype
+- `MMDD_HHMMSS_simulation.finalpop.rds` - Final (evolved) population Rlist
+- `MMDD_HHMMSS_simulation.initialpop.rds` - Initial population Rlist - clonal population in our simulations
+- `MMDD_HHMMSS_simulation.param` - Parameter file used for evolution
+- `MMDD_HHMMSS_simulation.table` - Generation by generation evolution table summary: id, generation, mean population (pop) phenotype, mean pop genotype, mean pop fitness
 
 ### Specific launch
+Note that all launch parameters are independant and facultative.
 ```
 ./Launch_GeneRation.R -p param_file -o output_name -ipop MMDD_HHMMSS_simulation.finalpop.rds
 ```
 - `-p` for the specific parameter file to be used
 - `-o` for the specified output name
 - `-ipop` for a specific .rds population to use as first generation for the subsequent evolution (often the final population of another simulation)
+- `-fun`, with the default being `GeneRation_Fun_v1.R`.
 
+ 
 ### Parameter file
 - Use `RANDOM` for random optima
 
@@ -45,7 +47,7 @@ will return a dated folder MMDD_HHMMSS_simulation containing:
 
 ### Reproduction of the results:
 In parenthesis are the corresponding script numbers.
-- Launch Burnin
+- Launch Burnin - using `Launch_BurninGeneRation.R`: a first simulation is launched, then two expression optima are changed in a new param files (new second environment) and a new folder is created in the very folder containing the simulation for adaptation to the first environment. 
 - Extract simu features (022)
 - Isolate successful
 - Count degree 
