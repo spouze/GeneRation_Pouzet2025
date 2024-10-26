@@ -44,9 +44,6 @@ Note that all launch parameters are independant and facultative.
 ### Other notes
 - Parameter files detail: see "parameter_files" folder.
 - Reproduction of the results / data pipeline : see "data_analysis_scripts" folder
-- Use `RANDOM` for random optima
-- Launch Burnin - using `Launch_BurninGeneRation.R`: a first simulation is launched, then two expression optima are changed in a new param files (new second environment) and a new folder is created in the very folder containing the simulation for adaptation to the first environment.
-- `Launch_BurninGeneRation.R` - The Launcher for two simulations: adaptation in two successive environements
 
 ---
 
