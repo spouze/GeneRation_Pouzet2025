@@ -37,7 +37,7 @@ Note that all launch parameters are independant and facultative.
 ```
 - `-p` for the specific parameter file to be used - default is generated automatically, 5 genes, 2 under selection, 100 generations for a population of 100 individuals.
 - `-o` for the specified output name - default is "simulation".
-- `-ipop` for a specific .rds population to use as first generation for the subsequent evolution (often the final population of another simulation) - default is a automatically generated heterogeneous (non-clonal) population.
+- `-ipop` for a specific .rds population to use as first generation for the subsequent evolution (often the final population of another simulation) - default is an automatically generated heterogeneous (non-clonal) population.
 - `-fun` for a specific functions' file - default is `GeneRation_Fun_v1.R`.
 
 
