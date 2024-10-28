@@ -9,3 +9,9 @@ Besides the functions necessary for the simuations, `GeneRation_Fun_v1.R`contain
 - `graphall(simu[[1]])` returns the various graphs automatically generated as png in the simulation file.
 - `WFinale(simu[[1]])` return the average final W interaction matrix from the output dataframe
 - `WKinetics3()` 
+
+```R
+# This is an example
+mean(1,2)
+
+```
