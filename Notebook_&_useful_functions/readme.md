@@ -3,6 +3,8 @@ Besides the functions necessary for the simuations, `GeneRation_Fun_v1.R`contain
 
 Using R studio (this is the content of the above file):
 ```R
+setwd("Documents/DOCUMENTS/GeneRation_Pouzet2024/Notebook_&_useful_functions/")
+
 # Load functions
 source("GeneRation_Fun_v1.R")
 # Load required packages
