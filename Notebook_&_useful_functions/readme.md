@@ -1,7 +1,7 @@
 ### Useful functions
 Besides the functions necessary for the simuations, `GeneRation_Fun_v1.R`contains functions R functions for in-depth analyses of the simulations. Source the file in R to access the functions.
 
-Using R studio (this is the content of the above file):
+Using R studio (this is the content of the above "Tutorial" file):
 ```R
 setwd("Documents/DOCUMENTS/GeneRation_Pouzet2024/Notebook_&_useful_functions/")
 
