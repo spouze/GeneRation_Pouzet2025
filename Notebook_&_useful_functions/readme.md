@@ -48,7 +48,6 @@ dev.off() # clean up plotting area first
 WKinetics3(W, optima = simu[[5]]$FITNESS_OPTIMUM[1:5])
 
 
-
 #########################################################
 ################################################
 ## Advanced functions
