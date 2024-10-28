@@ -5,6 +5,8 @@ Using R studio (this is the content of the above file):
 ```R
 # Load functions
 source("GeneRation_Fun_v1.R")
+# Load required packages
+library(rlist, RColorBrewer, igraph)
 
 #########################################################
 ################################################
