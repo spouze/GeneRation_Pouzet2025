@@ -101,11 +101,11 @@ check[1,] = c(simu[[4]],
               simu[[5]]$FITNESS_STRENGTH)
 
 # Need a specially formatted individual:
-source("IndivRecap_fromSET_FUN.R")
+source("IndivRecap_fromSET_FUN.R") # in the "Data_Analysis_scripts" folder
 new_ind = IndivRecap(check)
 
 # Carry out a mutation test
-source("128.New_Mutate_in_new_Env_4.R")
+source("128.New_Mutate_in_new_Env_4.R") # in the "Data_Analysis_scripts" folder
 # Regulatory mutations (+0.5)
 Mutate_in_new_environment(ind = new_ind, mut_type = "REG", reg_muteff = 0.5, id = 1)
 # Coding mutations (-0.1)
