@@ -3,7 +3,8 @@ setwd("Documents/DOCUMENTS/GeneRation/")
 # Load functions
 source("GeneRation_Fun_v1.R")
 
-########################
+#########################################################
+################################################
 ## Basic functions
 
 # Load the simulation (default with 5 genes, 100 individuals, 100 generations)
@@ -40,7 +41,9 @@ dev.off() # clean up plotting area first
 WKinetics3(W, optima = simu[[5]]$FITNESS_OPTIMUM[1:5])
 
 
-########################
+
+#########################################################
+################################################
 ## Advanced functions
 
 # Check matrix as points
@@ -59,9 +62,9 @@ graphmtrxvalues(simu[[1]])
 graphtransvector(simu[[1]])
 
 # get average individual:
-IndivFinale(simu, gen = 100) # reconstruct the latest average individual from the output dataframe
+last_ind = IndivFinale(simu, gen = 100) # reconstruct the latest average individual from the output dataframe
 # Get mean (or median) mtrix from the population (and NOT from the dataframe)
-WFromPop(simu[[3]]) == IndivFinale(simu, gen = 100)$ind
+W = WFromPop(simu[[3]]) == IndivFinale(simu, gen = 100)$ind
 # Those two previous operations are equivalent in general.
 
 
@@ -72,3 +75,50 @@ W2 = WConvert(W, tfreg = "NOTunique")
 # Clean up matrix from small values for display or other operations
 W3 = WClean(W, threshold = 0.01)
 
+
+#########################################################
+################################################
+## Mutations functions
+# The scripts and function and hardcoded for Simulations with 10 genes.
+
+# Get info from the simulation
+# Directly use 022.Executable_Extract2.R ; launch with bash 
+# Or by hand for one single simulation here: 
+simu = LoadSimu("0614_014837_SCALEF_027_november/")
+check = data.frame(matrix(ncol=263+10+10+2, nrow = 1))
+colnames(check) = c("id", "topo", colnames(simu[[1]]), paste0("FIT_OPT", 1:10), paste0("FIT_STR",1:10))
+check[1,] = c(simu[[4]], 
+              substr(simu[[4]], 13,18), 
+              simu[[1]][nrow(simu[[1]]),],
+              simu[[5]]$FITNESS_OPTIMUM,
+              simu[[5]]$FITNESS_STRENGTH)
+
+# Need a specially formatted individual:
+source("IndivRecap_fromSET_FUN.R")
+new_ind = IndivRecap(check)
+
+# Carry out a mutation test
+source("128.New_Mutate_in_new_Env_4.R")
+# Regulatory mutations (+0.5)
+Mutate_in_new_environment(ind = new_ind, mut_type = "REG", reg_muteff = 0.5, id = 1)
+# Coding mutations (-0.1)
+Mutate_in_new_environment(ind = new_ind, mut_type = "COD", cod_muteff = -0.1, id = 2)
+# Duplications (+1)
+Mutate_in_new_environment(ind = new_ind, mut_type = "DUP", dupdel_number = 1, id = 3)
+# Deletions (-2)
+Mutate_in_new_environment(ind = new_ind, mut_type = "DEL", dupdel_number = 2, id = 4)
+# The output includes:
+# - an id (usually the counter)
+# - the output name of the simu
+# - the topology (here specifically formatted)
+# - the mutation type ( REG COD DUP DELL)
+# - the location of the mutation (ij)
+# - the value of the mutation (init, final, delta)
+# - the deplication/deletion number and genes concerned
+# - Fitness info (population in first environement (E1), individual (ind) in E1, ind in second environment (E2), delta, effect, threshold)
+# - Pleiotropy info (pleiotropy and threshold)
+# - record of the mutation reg_muteff or cod_muteff
+# - An impacted gene randomly picked: number and expression change
+# - The max impacted gene : number and expression change
+# - The min impacted gene : number and expression change
+# - The cis-effect check (0 or 1).
