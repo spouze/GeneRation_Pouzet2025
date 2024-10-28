@@ -1,9 +1,13 @@
 #copy of 126 # ici on va ajouter les tests pour ce qui est de cis/trans
 # DUPLICATED 128 (safeguard) to handle the cis/trans for DUP DEL (ignore cis/trans in those conditions actualyl)
-setwd("/Users/sylvain/Documents/DOCUMENTS/GeneRation/M2_PAPER")
-source("../GeneRation_Fun.R")
-source("R_SCRIPTS/Comfort_FUN.R")
-source("R_SCRIPTS/IndivRecap_fromSET_FUN.R")
+
+# IF USED AS STANDALONE
+#setwd("/Users/sylvain/Documents/DOCUMENTS/GeneRation/M2_PAPER")
+#source("../GeneRation_Fun.R")
+#source("R_SCRIPTS/Comfort_FUN.R")
+#source("R_SCRIPTS/IndivRecap_fromSET_FUN.R")
+
+
 #dream_SET = read.csv("Extracted_data/dream_SIMUSET_Lasts.csv", header = T)[,-1]
 
 cnames = c("id", "name", "topology", 
