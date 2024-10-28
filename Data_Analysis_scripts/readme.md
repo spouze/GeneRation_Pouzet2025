@@ -1,7 +1,7 @@
 ### Reproduction of the results:
 In parenthesis are the corresponding R script numbers.
-- Launch simulations - (serialize using `launcher_generator.R`) - can launch `Launch_BurninGeneRation.R` - The Launcher for two simulations: adaptation in two successive environements
-- Extract simu features and isolate successful ones (`022`)
+- Launch simulations - (serialize using `launcher_generator.R`) - can launch `Launch_BurninGeneRation.R` - The Launcher for two simulations: adaptation in two successive environements - in bash
+- Extract simu features and isolate successful ones (`022`) - in bash (or by hand as shown in "Notebook_&_useful functions").
 - Count degree (`060`)
 - FIG01: check and plot simu, fit and plot degree (`099`)
 - FIG02: compare adaptation profiles (`103`)
