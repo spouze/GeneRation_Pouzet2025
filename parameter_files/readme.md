@@ -1,4 +1,5 @@
 ## SCALEF Parameter file details: 
+These are the parameters used to obtain the scale-free topology in the paper.
 
 | Parameter               | Value                                                         | Details                                                   |
 |-------------------------|---------------------------------------------------------------|-----------------------------------------------------------|
