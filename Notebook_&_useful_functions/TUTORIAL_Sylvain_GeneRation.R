@@ -1,7 +1,9 @@
-setwd("Documents/DOCUMENTS/GeneRation/")
+setwd("Documents/DOCUMENTS/GeneRation_Pouzet2024/Notebook_&_useful_functions/")
 
 # Load functions
 source("GeneRation_Fun_v1.R")
+# Load required packages
+library(rlist, RColorBrewer, igraph)
 
 #########################################################
 ################################################
