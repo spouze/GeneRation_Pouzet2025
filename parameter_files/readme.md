@@ -11,7 +11,7 @@ These are the parameters used to obtain the scale-free topology in the paper.
 | INIT_CONDIAG             | 0                                                             | Initial and diagonal condition. If zero, will always remain zero, thus preventing autoregulation   |
 | INIT_ALLELES             | 0.0 0.00002                                                   | Initial regulatory allele frequencies (normal law)      |
 | INIT_TRANSALLELES        | 0.0 0.00002                                                   | Initial coding-allele frequencies (normal law)                          |
-| TYPE_ALLELES             | zero                                                          | NOT USED                                        |
+| TYPE_ALLELES             | zero                                                          | _NOT USED_                                        |
 | GENET_MUTRATES           | 0.01                                                          | (cis)-regulatory mutation rate                                      |
 | GENET_TRANSMUTRATES      | 0.01                                                          | Coding (activity) mutation rate                                         |
 | GENET_MUTSD              | 0.5                                                           | Standard deviation for mutation size                     |
@@ -22,23 +22,23 @@ These are the parameters used to obtain the scale-free topology in the paper.
 | DEV_TIMESTEPS            | 20                                                            | Developmental time steps to compute phenotype                |
 | DEV_CALCSTEPS            | 2                                                             | Number of last developmental step to average to compute phenotype     |
 | TF_REG                   | both                                                          | Transcription factor regulation type ("both" for acting both as activator and repressor. Use "unique" for being only activator or repressor. Careful, this changes the biological meaning.    |
-| GENET_MUTTYPE            | individual                                                    | NOT USED                      |
-| GENET_RECRATES           | 0.5                                                           | NOT USED - recombination rate hardcoded to 0.5                                         |
-| GENET_SELFING            | 0.0                                                           | NOT USED                                               |
-| GENET_CLONAL             | 0.0                                                           | NOT USED                                            |
-| GENET_PLOIDY             | 2                                                             | NOT USED - ploidy hardcoded to 2 (diploid)                                     |
-| GENET_EPIGENET           | 0.0                                                           | NOT USED                                    |
-| FITNESS_TYPE             | gaussian                                                      | NOT USED - fitness type hardcoded to gaussian                                      |
-| INIT_CONNECT             | 1                                                             | NOT USED                                 |
-| TYPE_SO                  | basal                                                         | NOT USED                             |
-| FITNESS_STAB             | exponential_stab                                              | NOT USED                              |
-| OUT_UNSTAB               | yes                                                           | NOT USED                          |
-| OUT_GENO                 | yes                                                           | NOT USED                                  |
-| OUT_CANAL_TESTS          | 0                                                             | NOT USED                                         |
-| OUT_CANAL_MUTSD          | 0.5                                                           | NOT USED                   |
-| OUT_HERIT_TESTS          | 0                                                             | NOT USED                                         |
-| OUT_DIREPI_TESTS         | 0                                                             | NOT USED                                     |
-| INIT_RECURRENCE          | 0                                                             | NOT USED                                         |
-| FITNESS_FLUCT            | no_fluctuation                                                 | NOT USED                |
-| SIMUL_MAXGEN             | 5000                                                          | NOT USED               |
-| TYPE_ARCHI               | m2                                                            | NOT USED                     |
+| GENET_MUTTYPE            | individual                                                    | _NOT USED_                      |
+| GENET_RECRATES           | 0.5                                                           | _NOT USED_ - recombination rate hardcoded to 0.5                                         |
+| GENET_SELFING            | 0.0                                                           | _NOT USED_                                               |
+| GENET_CLONAL             | 0.0                                                           | _NOT USED_                                            |
+| GENET_PLOIDY             | 2                                                             | _NOT USED_ - ploidy hardcoded to 2 (diploid)                                     |
+| GENET_EPIGENET           | 0.0                                                           | _NOT USED_                                    |
+| FITNESS_TYPE             | gaussian                                                      | _NOT USED_ - fitness type hardcoded to gaussian                                      |
+| INIT_CONNECT             | 1                                                             | _NOT USED_                                 |
+| TYPE_SO                  | basal                                                         | _NOT USED_                             |
+| FITNESS_STAB             | exponential_stab                                              | _NOT USED_                              |
+| OUT_UNSTAB               | yes                                                           | _NOT USED_                          |
+| OUT_GENO                 | yes                                                           | _NOT USED_                                  |
+| OUT_CANAL_TESTS          | 0                                                             | _NOT USED_                                         |
+| OUT_CANAL_MUTSD          | 0.5                                                           | _NOT USED_                   |
+| OUT_HERIT_TESTS          | 0                                                             | _NOT USED_                                         |
+| OUT_DIREPI_TESTS         | 0                                                             | _NOT USED_                                     |
+| INIT_RECURRENCE          | 0                                                             | _NOT USED_                                         |
+| FITNESS_FLUCT            | no_fluctuation                                                 | _NOT USED_                |
+| SIMUL_MAXGEN             | 5000                                                          | _NOT USED_               |
+| TYPE_ARCHI               | m2                                                            | _NOT USED_                     |
