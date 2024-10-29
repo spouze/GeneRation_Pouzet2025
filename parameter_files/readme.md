@@ -6,7 +6,7 @@ These are the parameters used to obtain the scale-free topology in the paper.
 | SIMUL_GENER              | 1000                                                          | Number of simulation generations                           |
 | INIT_PSIZE               | 1000                                                          | Population size                                    |
 | GENET_NBLOC              | 10                                                            | Number of genes                             |
-| INIT_BASAL               | 0.2                                                           | Basal initial condition value (constitutive expression)                              |
+| INIT_BASAL               | 0.2                                                           | Default basal expression, when no regulation (constitutive expression)                              |
 | INIT_CLONAL              | clonal                                                        | Indicates if the population is clonal or not (use "notclonal" for not clonal)               |
 | INIT_CONDIAG             | 0                                                             | Initial and diagonal condition. If zero, will always remain zero, thus preventing autoregulation   |
 | INIT_ALLELES             | 0.0 0.00002                                                   | Initial regulatory allele frequencies (normal law)      |
