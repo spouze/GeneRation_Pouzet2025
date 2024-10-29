@@ -7,18 +7,18 @@ These are the parameters used to obtain the scale-free topology in the paper.
 | INIT_PSIZE               | 1000                                                          | Population size                                    |
 | GENET_NBLOC              | 10                                                            | Number of genes                             |
 | INIT_BASAL               | 0.2                                                           | Default basal expression, when no regulation (constitutive expression)                              |
-| INIT_CLONAL              | clonal                                                        | Indicates if the population is clonal or not (use "notclonal" for not clonal)               |
+| INIT_CLONAL              | clonal                                                        | Indicates if the initial population is clonal or not (use "notclonal" for not clonal)               |
 | INIT_CONDIAG             | 0                                                             | Initial and diagonal condition. If zero, will always remain zero, thus preventing autoregulation   |
-| INIT_ALLELES             | 0.0 0.00002                                                   | Initial regulatory allele frequencies (normal law)      |
-| INIT_TRANSALLELES        | 0.0 0.00002                                                   | Initial coding-allele frequencies (normal law)                          |
+| INIT_ALLELES             | 0.0 0.00002                                                   | Initial regulatory allele values (normal law: mean and sd)      |
+| INIT_TRANSALLELES        | 0.0 0.00002                                                   | Initial coding-allele (normal law: mean and sd)                          |
 | TYPE_ALLELES             | zero                                                          | _NOT USED_                                        |
 | GENET_MUTRATES           | 0.01                                                          | (cis)-regulatory mutation rate                                      |
 | GENET_TRANSMUTRATES      | 0.01                                                          | Coding (activity) mutation rate                                         |
 | GENET_MUTSD              | 0.5                                                           | Standard deviation for mutation size                     |
 | FITNESS_OPTIMUM          | random                                                        | Optimum fitness values: "random" indicates that the optima (between 0 an 1) will be drawn randomly |
-| FITNESS_STRENGTH         | 10 10 10 10 10 0 0 0 0 0                                      | Strength of fitness component (only the first 5 genes under selection (selection strenght is 10), the last 5 are free)      |
-| FITNESS_STABSTR          | 46000                                                         | Strength of stabilizing selection (prevents periodic/cycling networks)    |
-| SIMUL_OUTPUT             | 1                                                             | Simulation output mode (if 1, writes the table file)           |
+| FITNESS_STRENGTH         | 10 10 10 10 10 0 0 0 0 0                                      | Strength of stabilizing selection (only the first 5 genes under selection (selection strenght is 10), the last 5 are free)      |
+| FITNESS_STABSTR          | 46000                                                         | Strength of selection on stability (prevents periodic/cycling networks)    |
+| SIMUL_OUTPUT             | 1                                                             | Frequency of the output files (if 1, writes at every generation)           |
 | DEV_TIMESTEPS            | 20                                                            | Developmental time steps to compute phenotype                |
 | DEV_CALCSTEPS            | 2                                                             | Number of last developmental step to average to compute phenotype     |
 | TF_REG                   | both                                                          | Transcription factor regulation type ("both" for acting both as activator and repressor. Use "unique" for being only activator or repressor. Careful, this changes the biological meaning.    |
