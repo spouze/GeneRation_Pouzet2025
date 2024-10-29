@@ -23,12 +23,12 @@ These are the parameters used to obtain the scale-free topology in the paper.
 | DEV_CALCSTEPS            | 2                                                             | Number of last developmental step to average to compute phenotype     |
 | TF_REG                   | both                                                          | Transcription factor regulation type ("both" for acting both as activator and repressor. Use "unique" for being only activator or repressor. Careful, this changes the biological meaning.    |
 | GENET_MUTTYPE            | individual                                                    | NOT USED                      |
-| GENET_RECRATES           | 0.5                                                           | NOT USED - hardcoded to 0.5                                         |
+| GENET_RECRATES           | 0.5                                                           | NOT USED - recombination rate hardcoded to 0.5                                         |
 | GENET_SELFING            | 0.0                                                           | NOT USED                                               |
 | GENET_CLONAL             | 0.0                                                           | NOT USED                                            |
-| GENET_PLOIDY             | 2                                                             | NOT USED - hardcoded to 2 (diploid)                                     |
+| GENET_PLOIDY             | 2                                                             | NOT USED - ploidy hardcoded to 2 (diploid)                                     |
 | GENET_EPIGENET           | 0.0                                                           | NOT USED                                    |
-| FITNESS_TYPE             | gaussian                                                      | NOT USED - hardcoded to gaussian                                      |
+| FITNESS_TYPE             | gaussian                                                      | NOT USED - fitness type hardcoded to gaussian                                      |
 | INIT_CONNECT             | 1                                                             | NOT USED                                 |
 | TYPE_SO                  | basal                                                         | NOT USED                             |
 | FITNESS_STAB             | exponential_stab                                              | NOT USED                              |
