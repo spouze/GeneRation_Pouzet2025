@@ -1,6 +1,7 @@
 ### Useful functions
 Besides the functions necessary for the simuations, `GeneRation_Fun_v1.R`contains functions R functions for in-depth analyses of the simulations. Source the file in R to access the functions.
-</br>You will find here:
+
+You will find here:
 - the R script to use as template or exemple for further analyses
 - a folder containing a simple default simulation (5 genes, 100 individuals, 100 generations)
 - a folder containing an actual simulation used for the paper (10 genes, 1000 individuals, 1000 generations)
