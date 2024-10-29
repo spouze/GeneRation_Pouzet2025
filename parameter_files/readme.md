@@ -16,7 +16,7 @@ These are the parameters used to obtain the scale-free topology in the paper.
 | GENET_TRANSMUTRATES      | 0.01                                                          | Coding (activity) mutation rate                                         |
 | GENET_MUTSD              | 0.5                                                           | Standard deviation for mutation size                     |
 | FITNESS_OPTIMUM          | random                                                        | Optimum fitness values: "random" indicates that the optima (between 0 an 1) will be drawn randomly |
-| FITNESS_STRENGTH         | 10 10 10 10 10 0 0 0 0 0                                      | Strength of fitness component (only the first 5 genes under selection)      |
+| FITNESS_STRENGTH         | 10 10 10 10 10 0 0 0 0 0                                      | Strength of fitness component (only the first 5 genes under selection (selection strenght is 10), the last 5 are free)      |
 | FITNESS_STABSTR          | 46000                                                         | Strength of stabilizing selection (prevents periodic/cycling networks)    |
 | SIMUL_OUTPUT             | 1                                                             | Simulation output mode (if 1, writes the table file)           |
 | DEV_TIMESTEPS            | 20                                                            | Developmental time steps to compute phenotype                |
