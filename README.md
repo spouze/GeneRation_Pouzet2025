@@ -42,9 +42,9 @@ Note that all launch parameters are independant and facultative.
 
 
 ### Other notes
-- Parameter files detail: see [parameter_files](parameter_files) folder.
-- Reproduction of the results / data pipeline : see [Data_analysis_scripts](Data_Analysis_scripts) folder
-- For a small tutorial and useful functions, see [Notebook_&_useful_functions](Notebook_&_useful_functions) folder
+- Parameter files detail: see the [parameter files](parameter_files) folder.
+- Reproduction of the results / data pipeline : see the [Data analysis scripts](Data_Analysis_scripts) folder
+- For a small tutorial and useful functions, see the [Notebook and useful functions](Notebook_&_useful_functions) folder
 - Launch Burnin - using `Launch_BurninGeneRation.R`: a first simulation is launched, then two expression optima are changed in a new param files (new second environment) and a new folder is created in the very folder containing the simulation for adaptation to the first environment.
 
 ---
