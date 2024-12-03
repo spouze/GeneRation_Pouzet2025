@@ -410,7 +410,7 @@ graphfit = function(output=simu[[1]]){
 graphexp=function(output=simu[[1]]){
   L=length(grep(x = colnames(output), pattern = "MPhen.*"))
   par(bg=bgcol())
-  plot(NA, xlim=c(0,output$Gen[nrow(output)]) ,ylim=c(0,1), main="Gene expressions - Phenotype moyen", xlab="Generations", ylab="Expression")
+  plot(NA, xlim=c(0,output$Gen[nrow(output)]) ,ylim=c(0,1), main="Phenotype - Gene expressions (mean)", xlab="Generations", ylab="Expression")
   mycolrs=mycolors() ; if (length(mycolrs)<L) {for (i in (length(mycolrs)+1):L){mycolrs[i]=mycolrs[i-9]}}
   for (i in 1:L){ polygon(c(output$Gen, rev(output$Gen)), c(output[[paste("MPhen", i, sep="")]]+output[[paste("VPhen", i, sep="")]], rev(output[[paste("MPhen", i, sep="")]]-output[[paste("VPhen", i, sep="")]])), col=varcol(), border=NA)}
   for (i in 1:L){ lines(output$Gen, output[[paste("MPhen", i, sep="")]], type = 'l', col=mycolrs[i])}
@@ -421,7 +421,7 @@ graphmtrxvalues = function(output=simu[[1]]){ #GRAPH les valeurs de la matrice
   par(bg=bgcol())
   L=length(grep(x = colnames(output), pattern = "MPhen.*"))
   tt=output[,grep(x = colnames(output), pattern = "MeanAll.*")] #extracts values of the MeanAll
-  plot(NA, xlim=c(0,output$Gen[nrow(output)]) ,ylim=c(min(tt)-0.1,max(tt)+0.1), main="Mean Matrix values (alleles) in population", xlab="Generations", ylab="Strength of interaction")
+  plot(NA, xlim=c(0,output$Gen[nrow(output)]) ,ylim=c(min(tt)-0.1,max(tt)+0.1), main="Regulatory values in population (mean)", xlab="Generations", ylab="Strength of interaction")
   mycolrs=mycolors() ; if (length(mycolrs)<L) {for (i in (length(mycolrs)+1):L){mycolrs[i]=mycolrs[i-9]}}
   newcolors=c()
   #colors par colonnes (par effet DU gene sur les autres):
@@ -437,7 +437,7 @@ graphtransvector = function(output=simu[[1]]){
   par(bg=bgcol())
   L=length(grep(x = colnames(output), pattern = "MPhen.*"))
   tt=output[,grep(x = colnames(output), pattern = "MTrans.*")]
-  plot(NA, xlim=c(0,output$Gen[nrow(output)]) ,ylim=c(-2,2), main="Trans values in pop", xlab="Generations", ylab="Strength of interaction / activation force") #ylim=c(min(tt)-0.1,max(tt)+0.1)
+  plot(NA, xlim=c(0,output$Gen[nrow(output)]) ,ylim=c(-2,2), main="Activity (coding) values in pop (mean)", xlab="Generations", ylab="Strength of interaction / activation force") #ylim=c(min(tt)-0.1,max(tt)+0.1)
   mycolrs=mycolors() ; if (length(mycolrs)<L) {for (i in (length(mycolrs)+1):L){mycolrs[i]=mycolrs[i-9]}}
   for (i in 1:L){ polygon(c(output$Gen, rev(output$Gen)), c(output[[paste("MTrans", i, sep="")]]+output[[paste("VTrans", i, sep="")]], rev(output[[paste("MTrans", i, sep="")]]-output[[paste("VTrans", i, sep="")]])), col=varcol(), border=NA)}
   for (i in 1:L){ lines(output$Gen, output[[paste("MTrans", i, sep="")]], type = 'l', col=mycolrs[i])}
