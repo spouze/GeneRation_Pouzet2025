@@ -916,7 +916,7 @@ WNetwork4 = function(W=W, tkplot=F, vcex="vertices_size", dist = 0.01, angles=""
   # Define the angles
   if (angles == "" && dist != 0){
     #angles = c(0, -0.2, -0.4, -0.6, -0.8, 1, 0.8, 0.6, 0.4, 0.2)*pi # for the layout_in_circle
-    angles = c(-0.3, -0.1, 0.1, 0.3, 0.5, 0.7, 9, -0.9, -0.7, -0.5)*pi # for the clockwise_layout
+    angles = c(c(-0.3, -0.1, 0.1, 0.3, 0.5, 0.7, 9, -0.9, -0.7, -0.5)*pi)[1:L] # for the clockwise_layout
   } # works only for 10 genes here and a circular representation
   
   # VERTICES / Nodes
