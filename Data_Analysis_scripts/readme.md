@@ -12,4 +12,4 @@ In parenthesis are the corresponding R script numbers.
 
 See also in the folder "Notebook_&_useful functions" to carry out the mutations by hand and get familiar with the scripts.
 
-Note that the "Extracted data" folder used several times in the scripts are simple a destination or storing folder to be modified at will. 
+Note that the "Extracted\_data" folder used several times in the scripts are simple a destination or storing folder to be modified at will. 
