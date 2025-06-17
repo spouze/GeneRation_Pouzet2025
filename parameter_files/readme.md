@@ -43,4 +43,4 @@ These are the parameters used to obtain the scale-free topology in the paper.
 | SIMUL_MAXGEN             | 5000                                                          | _NOT USED_               |
 | TYPE_ARCHI               | m2                                                            | _NOT USED_                     |
 
-NB: many parameters are not used because the parameter file originates from another version of the model that used more parameters.
+NB: Many parameters are not used because the parameter file originates from another version of the model that used more parameters. The parameter file will work without all those unused parameters. They are indicated here to avoid any potential confusion, because they are present in the parameter files used for the simulation of the paper.
