@@ -42,3 +42,5 @@ These are the parameters used to obtain the scale-free topology in the paper.
 | FITNESS_FLUCT            | no_fluctuation                                                 | _NOT USED_                |
 | SIMUL_MAXGEN             | 5000                                                          | _NOT USED_               |
 | TYPE_ARCHI               | m2                                                            | _NOT USED_                     |
+
+NB: many parameters are not used because the parameter file originates from another version of the model that used more parameters.
