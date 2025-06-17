@@ -3,8 +3,8 @@ Besides the functions necessary for the simuations, `GeneRation_Fun_v1.R`contain
 
 You will find here:
 - the R script to use as template or exemple for further analyses
-- a zipped folder containing a simple default simulation (5 genes, 100 individuals, 100 generations). 
-- a zipped folder containing an actual simulation used for the paper (10 genes, 1000 individuals, 1000 generations)
+- a zipped folder containing a simple default simulation (5 genes, 100 individuals, 100 generations). The folder contains, as described in the main readme, the 8 files generated from the launch of a simulation (pngs with graphs and populations from the initial and final generations as well as a dataframe detailing every generation and the parameter file used).
+- a zipped folder containing an actual simulation used for the paper (10 genes, 1000 individuals, 1000 generations), with the accompanying files described above and in the main readme. This is one of the 3 000 successful simulations used.
 
 Using R studio (this is the content of the above "Tutorial" file):
 ```R
