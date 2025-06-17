@@ -10,5 +10,5 @@ In parenthesis are the corresponding R script numbers.
 - FIG04: Plot cis-effects and pleiotropy (`182`)
 - FIG05: Enrichment analysis (`171`)
 
-Note that the `Extracted_data` folder used several times in the scripts is simply a destination or storing folder to be modified at will.</br>
+Note that the (`Extracted_data`) folder used several times in the scripts is simply a destination or storing folder to be modified at will.</br>
 See also in the folder "Notebook_&_useful functions" to carry out the mutations by hand and get familiar with the scripts.
