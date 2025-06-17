@@ -1,6 +1,6 @@
-# GeneRation software for Pouzet2024
+# GeneRation software for Pouzet2025
 
-This repository contains codes for the modified Wagner's model of Gene Regulatory Networks Evolution used in [Pouzet & Le Rouzic 2024](https://www.biorxiv.org/content/10.1101/2024.11.28.625874v1): "Gene network topology drives the mutational landscape of gene expression".
+This repository contains codes for the modified Wagner's model of Gene Regulatory Networks Evolution used in [Pouzet & Le Rouzic 2025](https://www.biorxiv.org/content/10.1101/2024.11.28.625874v1): "Gene network topology drives the mutational landscape of gene expression".
 
 ### Files
 - `Launch_GeneRation.R` - The Launcher for adaptation in a single environment
