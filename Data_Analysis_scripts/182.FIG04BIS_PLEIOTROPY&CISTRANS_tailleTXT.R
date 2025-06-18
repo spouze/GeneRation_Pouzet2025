@@ -1,8 +1,9 @@
-setwd("/Users/sylvain/Documents/DOCUMENTS/GeneRation/M2_PAPER")
-source("../GeneRation_Fun.R")
-source("R_SCRIPTS/Comfort_FUN.R") # includes assign
-source("R_SCRIPTS/128.New_Mutate_in_new_Env_4.R") # IMPORTANT #includes cnames
-source("R_SCRIPTS/IndivRecap_fromSET_FUN.R")
+
+source(here::here("GeneRation_Fun_v1.R"))
+source(here::here("Data_Analysis_scripts/Comfort_FUN.R"))
+source(here::here("Data_Analysis_scripts/128.New_Mutate_in_new_Env_4.R"))
+source(here::here("Data_Analysis_scripts/IndivRecap_fromSET_FUN.R"))
+
 library(RColorBrewer)
 
 # cnames ; cEnames
@@ -19,7 +20,7 @@ nrow(allmutations)
 {# LOAD ALL ####################################################################
 setwd("/Users/sylvain/Documents/DOCUMENTS/GeneRation/M2_PAPER")
 setwd("Extracted_data/allmutations_20240417_fig06/")
-allmut_files = list.files(pattern = "allmutations.{2,3}\\.csv")
+allmut_files = list.files(path=here::here("Extracted_data/allmutations_20240417_fig06/"), pattern = "allmutations.{2,3}\\.csv", full.names=TRUE)
 #n_batches = 20 #length(allmut_files)
 n_batches = length(allmut_files)
 all_batches = c()
@@ -31,7 +32,6 @@ for (batch_x_file in allmut_files[1:n_batches]){
   cat(paste0(sprintf("%02d", match(batch_x_file, allmut_files)), "/", 
              sprintf("%02d", length(allmut_files[1:n_batches])), " - ", batch_x_file, "\n"))
 } ; play(1)
-setwd("/Users/sylvain/Documents/DOCUMENTS/GeneRation/M2_PAPER")
 
 allmutations = do.call(rbind, lapply(all_batches, function(x) get(x))) ; play(2) # combine all the allmuations
 rm(list = all_batches) #remove individual batches
@@ -69,7 +69,6 @@ allmutations = allmutations[allmutations$notes != "NO MUTATION",]
 ################################################################################
 ################################################################################
 ################################################################################
-setwd("/Users/sylvain/Documents/DOCUMENTS/GeneRation/M2_PAPER")
 { # LANCE ET SAVE PDF
 width = 23 # unit is cm
 height =  20 # unit is cm

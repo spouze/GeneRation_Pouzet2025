@@ -8,7 +8,7 @@
 
 
 # 202405211030
-source("GeneRation_Fun.R") # depends d'ou le script est lancé
+source(here::here("GeneRation_Fun_v1.R"))
 
 cmd = commandArgs(trailingOnly=FALSE)
 

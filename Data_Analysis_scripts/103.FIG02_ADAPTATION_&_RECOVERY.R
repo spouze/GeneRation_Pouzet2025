@@ -1,9 +1,8 @@
 # Based on Script 030 Mostly
 # Copy de SCRIPT 100 on 20240422 - réduit au minnimum just pour la figure 2. 
 # Revoir  SCRIPT 100 pour plus d'options de figures - genre pour ploter la moyenne etc. 
-setwd("/Users/sylvain/Documents/DOCUMENTS/GeneRation/M2_PAPER/")
-source("../GeneRation_Fun.R")
-source("R_SCRIPTS/Comfort_FUN.R")
+source(here::here("GeneRation_Fun_v1.R"))
+source(here::here("Data_Analysis_scripts/Comfort_FUN.R"))
 topologies ; topocolors # quick check
 
 # LOAD DATA

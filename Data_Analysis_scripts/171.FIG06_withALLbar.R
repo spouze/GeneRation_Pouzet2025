@@ -1,6 +1,6 @@
-setwd("/Users/sylvain/Documents/DOCUMENTS/GeneRation/M2_PAPER")
-source("../GeneRation_Fun.R")
-source("R_SCRIPTS/Comfort_FUN.R") # includes assign
+source(here::here("GeneRation_Fun_v1.R"))
+source(here::here("Data_Analysis_scripts/Comfort_FUN.R"))
+
 # source("R_SCRIPTS/151.FILM_FUN.R") # includes WNetwork3
 # source("R_SCRIPTS/126.New_Mutate_in_new_Env_2.R") # IMPORTANT #includes cnames
 # source("R_SCRIPTS/IndivRecap_fromSET_FUN.R")
@@ -16,9 +16,8 @@ allmutations = read.csv("Extracted_data/allmutations_20240417_fig06/allmutations
 nrow(allmutations)
 
 # LOAD ALL ####################################################################
-setwd("/Users/sylvain/Documents/DOCUMENTS/GeneRation/M2_PAPER")
-setwd("Extracted_data/allmutations_20240417_fig06/")
-allmut_files = list.files(pattern = "allmutations....csv")
+
+allmut_files = list.files(path=here::here("Extracted_data/allmutations_20240417_fig06/"), pattern = "allmutations....csv", full.names=TRUE)
 #allmut_files = list.files(pattern = "allmutations[0-9]{3}\\.csv")
 n_batches = 10 #length(allmut_files)
 n_batches = length(allmut_files)
@@ -31,7 +30,6 @@ for (batch_x_file in allmut_files[1:n_batches]){
   cat(paste0(sprintf("%02d", match(batch_x_file, allmut_files)), "/", 
              sprintf("%02d", length(allmut_files[1:n_batches])), " - ", batch_x_file, "\n"))
 } ; play()
-setwd("/Users/sylvain/Documents/DOCUMENTS/GeneRation/M2_PAPER")
 
 allmutations = do.call(rbind, lapply(all_batches, function(x) get(x))) ; play() # combine all the allmuations
 rm(list = all_batches) #remove individual batches

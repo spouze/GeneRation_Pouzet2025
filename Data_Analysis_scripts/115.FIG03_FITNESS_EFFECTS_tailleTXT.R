@@ -1,10 +1,12 @@
 ## BASED ON 080.Plot_Tests_02.R
-{setwd("/Users/sylvain/Documents/DOCUMENTS/GeneRation/M2_PAPER")
-source("../GeneRation_Fun.R")
-source("R_SCRIPTS/Comfort_FUN.R") # includes assign
-source("R_SCRIPTS/128.New_Mutate_in_new_Env_4.R")
-source("R_SCRIPTS/IndivRecap_fromSET_FUN.R")
-library(RColorBrewer)}
+
+source(here::here("GeneRation_Fun_v1.R"))
+source(here::here("Data_Analysis_scripts/Comfort_FUN.R"))
+source(here::here("Data_Analysis_scripts/128.New_Mutate_in_new_Env_4.R"))
+source(here::here("Data_Analysis_scripts/IndivRecap_fromSET_FUN.R"))
+
+library(RColorBrewer)
+
 
 # cnames ; cEnames
 dream_SET = read.csv("Extracted_data/dream_SIMUSET_Lasts.csv", header = T)[,-1]
@@ -19,10 +21,9 @@ allmutations = read.csv("Extracted_data/allmutations_20240314/allmutations00.csv
 nrow(allmutations)
 
 {# LOAD ALL ####################################################################
-setwd("/Users/sylvain/Documents/DOCUMENTS/GeneRation/M2_PAPER")
-setwd("Extracted_data/allmutations_20240314/")
+
 #setwd("Extracted_data/allmutations_20240417_fig06/")
-allmut_files = list.files(pattern = "allmutations.{2,3}\\.csv") #"allmutations.*\\.csv"
+allmut_files = list.files(path=here::here("Extracted_data/allmutations_20240314"), pattern = "allmutations.{2,3}\\.csv", full.names=TRUE) #"allmutations.*\\.csv"
 n_batches = 15 #length(allmut_files)
 n_batches = length(allmut_files)
 all_batches = c()
@@ -34,7 +35,6 @@ for (batch_x_file in allmut_files[1:n_batches]){
   cat(paste0(sprintf("%02d", match(batch_x_file, allmut_files)), "/", 
              sprintf("%02d", length(allmut_files[1:n_batches])), " - ", batch_x_file, "\n"))
 } ; play(1)
-setwd("/Users/sylvain/Documents/DOCUMENTS/GeneRation/M2_PAPER")
 
 allmutations = do.call(rbind, lapply(all_batches, function(x) get(x))) ; play(2) # combine all the allmuations
 rm(list = all_batches) #remove individual batches

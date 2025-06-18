@@ -1,12 +1,11 @@
 # COPY SCRIPT 090 pour mettre le truc en mode vertical
 {# Import basic tools
-setwd("/Users/sylvain/Documents/DOCUMENTS/GeneRation/M2_PAPER/")
-source("../GeneRation_Fun.R")
-source("R_SCRIPTS/Comfort_FUN.R")
-source("R_SCRIPTS/IndivFinale_FUN.R")
-source("R_SCRIPTS/IndivRecap_fromSET_FUN.R")
-source("R_SCRIPTS/128.New_Mutate_in_new_Env_4.R")
-source("R_SCRIPTS/097.WTab2_WTab_modified.R") # et Wtab3
+source(here::here("GeneRation_Fun_v1.R"))
+source(here::here("Data_Analysis_scripts/Comfort_FUN.R"))
+source(here::here("Data_Analysis_scripts/IndivFinale_FUN.R"))
+source(here::here("Data_Analysis_scripts/IndivRecap_fromSET_FUN.R"))
+source(here::here("Data_Analysis_scripts/128.New_Mutate_in_new_Env_4.R"))
+# source(here::here("Data_Analysis_scripts/097.WTab2_WTab_modified.R"))
 library(MASS)
 }
 #####################################################################
