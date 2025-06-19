@@ -1,10 +1,12 @@
 ### Reproduction of the results:
+
 </br>
 In the `GeneRation_Data_Analysis_pack.zip` archive you will find: 
 - The main script `211.GeneRation_Analyses_code_Dryad.R` allowing for the reproduction of the data analysis workflow
 - Two functions-carrying R files (`GeneRation_DataAnalysis_FUN.R`and `GeneRation_Fun_v1.R`)
 - The folder `SIMULATIONS` containing raw data from 2 succesful simulations that were generated for the paper and used here as simple example for data treatment
 - The folder `Extracted_data` used as destination folder to store extracted output from raw simulation data
+
 </br>
 The script `211.GeneRation_Analyses_code_Dryad.R` that is the main script to launch in R or Rstudio, containing blocks of code leading to
 - Exctracting data from the simulations stored in the `SIMULATIONS` folder. This includes:
