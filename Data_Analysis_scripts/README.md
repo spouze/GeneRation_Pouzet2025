@@ -1,5 +1,5 @@
 ### Reproduction of the results:
-In the `GeneRation_Data_Analysis_pack.zip` archive you will find 
+In the `GeneRation_Data_Analysis_pack.zip` archive you will find: 
 - The main script `211.GeneRation_Analyses_code_Dryad.R` allowing for the reproduction of the data analysis workflow
 - Two functions-carrying R files (`GeneRation_DataAnalysis_FUN.R`and `GeneRation_Fun_v1.R`)
 - The folder `SIMULATIONS` containing raw data from 2 succesful simulations that were generated for the paper and used here as simple example for data treatment
