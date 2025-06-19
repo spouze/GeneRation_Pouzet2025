@@ -48,7 +48,7 @@ Note that all launch parameters are independant and facultative.
 - **Parameter files detail**: see the [parameter files](parameter_files) folder. </br>
   It contains the 3 sets of parameter files used to obtain the 3 topologies described in the article, as well as a detail account of each parameter used in the model.
 - **Reproduction of the results / data pipeline** : see the [Data analysis scripts](Data_Analysis_scripts) folder.</br>
-  It contains the different R scripts used to recapitulate the computational workflow followed to generate the various mutations types, compute their impacts, and plot the results.
+  It contains an archived with a main R script used to recapitulate the computational workflow followed to generate the various mutations types, compute their impacts, and plot the results.
 - **For a small tutorial and useful functions**, see the [Notebook and useful functions](Notebook_&_useful_functions) folder.</br>
   It contains a step by step template R script to get familiar with the treatment of the data generated from the simulations. Two simulation outputs are also included.
 
