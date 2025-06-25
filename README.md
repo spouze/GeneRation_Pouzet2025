@@ -26,13 +26,14 @@ This work was carried out on R version 4.04 (R Core Team 2021)
 - Plot figure 5: Plot cis-effects and pleiotropy (`6-Plot-fig5.R`)
 - Plot figure 6: Enrichment analysis (`7-Plot-fig6.R`)
 
+### Folders
+- `/SIMUALTIONS` folder: where raw simulations results are placed
+- `/Extracted_data` folder: contains results extracted from the simulations and mutation tests
+- `/figures` folder: contains generated figures
+- `/src` folder: source files and parameters. Find more details on data structure and parameter files in the readme - it contains the 3 sets of parameter files used to obtain the 3 topologies described in the article, as well as a detail account of each parameter used in the model.
+- `src/playground`: see [this folder](https://github.com/spouze/GeneRation_Pouzet2025/tree/main/src/playground) for a small tutorial and useful functions. It contains a step by step template R script to get familiar with the treatment of the data generated from the simulations. Two simulation outputs are also included.
+
 ### Notes: 
 - Figure 1 is the materials and methods figures, so not part of the results reproduction.
-- Simulations are placed in the `/SIMUALTIONS` folder
-- Results extracted from the simulations and mutation tests are placed in the `/Extracted_data` folder
-- Generated figures are placed on the `/figures` folder
-- The USED_DATA archive contains the data used in the paper, which can be used to recapitulate the figures of the paper based on the above scripts.
-- Find more details on data structure and parameter files in the `/src` readme - It contains the 3 sets of parameter files used to obtain the 3 topologies described in the article, as well as a detail account of each parameter used in the model.
-- **For a small tutorial and useful functions**, see the [Playground](Notebook_&_useful_functions) folder.</br>
-  It contains a step by step template R script to get familiar with the treatment of the data generated from the simulations. Two simulation outputs are also included.
+- A USED_DATA archive contains the data used in the paper, which can be used to recapitulate the figures of the paper based on the above scripts. It is available on the [corresponding dryad repository](https://doi.org/10.5061/dryad.2fqz61312).
 - Each subfolder has a corresponding README which will provide additional detail.
