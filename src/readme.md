@@ -1,8 +1,6 @@
 ### Files
 - `Launch_GeneRation.R` - The Launcher for adaptation in a single environment
 - `GeneRation_Fun_v1.R` - Functions, heart of the program
-- Suite of R scripts for data analyses (`data_analysis_scripts` folder)
-- Parameter files used for the paper (`parameter_files` folder)
 
 ### Simple launch
 with `Launch_GeneRation.R` and `GeneRation_Fun_v1.R` in the same folder.
