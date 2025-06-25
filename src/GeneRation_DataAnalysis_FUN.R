@@ -58,10 +58,12 @@ IndivRecap = function(storeLasts_set = dream_SET, line = 1, clean=T, cleanthresh
 ########### Comfort_FUN.R
 
 play = function(file=3){
-  if (file==3){system("afplay /Users/sylvain/Music/snap.mp3")}
-  if (file==1){system("afplay /Users/sylvain/Music/demisnap.mp3")}
-  if (file==2){system("afplay /Users/sylvain/Music/demisnap2.mp3")}
-  if (file=="mario"){system("afplay /Users/sylvain/Music/mario_end.mp3")}
+  # This is function that makes sounds, to keep track of script progression. 
+  # I deactivated it so that it does not conflict when other run the script
+  # if (file==3){system("afplay /Users/sylvain/Music/snap.mp3")}
+  # if (file==1){system("afplay /Users/sylvain/Music/demisnap.mp3")}
+  # if (file==2){system("afplay /Users/sylvain/Music/demisnap2.mp3")}
+  # if (file=="mario"){system("afplay /Users/sylvain/Music/mario_end.mp3")}
   }
 
 topologies = c("HIGHCO", "RANDOM", "SCALEF")
