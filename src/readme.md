@@ -1,6 +1,9 @@
 ### Files
+`- GeneRation_DataAnalysis_FUN.R`- Functions specific to data analyses
+- `GeneRation_Fun_v1.R` - Functions to run simulations, heart of the program
+- `Launch_BurninGeneRation.R` - The Launcher for adaptation in a two successive environments
 - `Launch_GeneRation.R` - The Launcher for adaptation in a single environment
-- `GeneRation_Fun_v1.R` - Functions, heart of the program
+
 
 ### Simple launch
 with `Launch_GeneRation.R` and `GeneRation_Fun_v1.R` in the same folder.
