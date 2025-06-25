@@ -31,7 +31,7 @@ This work was carried out on R version 4.04 (R Core Team 2021)
 - `/Extracted_data` folder: contains results extracted from the simulations and mutation tests
 - `/figures` folder: contains generated figures
 - `/src` folder: source files and parameters. Find more details on data structure and parameter files in the readme - it contains the 3 sets of parameter files used to obtain the 3 topologies described in the article, as well as a detail account of each parameter used in the model.
-- `src/playground`: see [this folder](https://github.com/spouze/GeneRation_Pouzet2025/tree/main/src/playground) for a small tutorial and useful functions. It contains a step by step template R script to get familiar with the treatment of the data generated from the simulations. Two simulation outputs are also included.
+- `src/playground`: see this folder for a small tutorial and useful functions. It contains a step by step template R script to get familiar with the treatment of the data generated from the simulations. Two simulation outputs are also included.
 
 ### Notes
 - Figure 1 is the materials and methods figures, so not part of the results reproduction.
