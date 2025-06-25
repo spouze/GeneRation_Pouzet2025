@@ -121,4 +121,4 @@ system(paste("echo ---", sep=""))
 
 #Petit bip de notification
 #if(file.exists("~/Music/snap.mp3")){system("play ~/Music/snap.mp3 >/dev/null 2>&1")} #hide the output heheeee!!
-if(file.exists("~/Music/snap.mp3")){system("afplay /Users/sylvain/Music/snap.mp3")}
+#if(file.exists("~/Music/snap.mp3")){system("afplay /Users/sylvain/Music/snap.mp3")}
