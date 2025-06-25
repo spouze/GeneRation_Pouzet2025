@@ -15,7 +15,7 @@ This work was carried out on R version 4.04 (R Core Team 2021)
 - `MASS` (v7.3.53.1) - fits for degree distributions
 
 
-### Reproduction of the results:
+### Reproduction of the results
 - Make sure R has the packages installed.
 - Launch simulations: In bash, use `cd /SIMULATIONS` to move to the correct directory and launch `sh ../0-run_simulations.sh`, which will launch 9 small simulations labeled "TUTO_SIMUS"
 - Extract simu features and isolate successful ones (`1-data_extract_from_simus.R`)
@@ -33,7 +33,7 @@ This work was carried out on R version 4.04 (R Core Team 2021)
 - `/src` folder: source files and parameters. Find more details on data structure and parameter files in the readme - it contains the 3 sets of parameter files used to obtain the 3 topologies described in the article, as well as a detail account of each parameter used in the model.
 - `src/playground`: see [this folder](https://github.com/spouze/GeneRation_Pouzet2025/tree/main/src/playground) for a small tutorial and useful functions. It contains a step by step template R script to get familiar with the treatment of the data generated from the simulations. Two simulation outputs are also included.
 
-### Notes: 
+### Notes
 - Figure 1 is the materials and methods figures, so not part of the results reproduction.
 - A USED_DATA archive contains the data used in the paper, which can be used to recapitulate the figures of the paper based on the above scripts. It is available on the [corresponding dryad repository](https://doi.org/10.5061/dryad.2fqz61312).
 - Each subfolder has a corresponding README which will provide additional detail.
