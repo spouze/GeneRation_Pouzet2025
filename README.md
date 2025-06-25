@@ -1,60 +1,34 @@
 # GeneRation software for Pouzet2025
 
-This repository contains codes for the modified Wagner's model of Gene Regulatory Networks Evolution used in [Pouzet & Le Rouzic 2025 - Evolution](https://academic.oup.com/evolut/advance-article-abstract/doi/10.1093/evolut/qpaf068/8132774): "Gene network topology drives the mutational landscape of gene expression" (previous on ([BioRxiv](https://www.biorxiv.org/content/10.1101/2024.11.28.625874v1))).
+This repository contains codes for the modified Wagner's model of Gene Regulatory Networks Evolution used in [Pouzet & Le Rouzic 2025 - Evolution](https://academic.oup.com/evolut/advance-article-abstract/doi/10.1093/evolut/qpaf068/8132774): "Gene network topology drives the mutational landscape of gene expression" (previously on [BioRxiv](https://www.biorxiv.org/content/10.1101/2024.11.28.625874v1)).
 
-### Files
-- `Launch_GeneRation.R` - The Launcher for adaptation in a single environment
-- `GeneRation_Fun_v1.R` - Functions, heart of the program
-- Suite of R scripts for data analyses (`data_analysis_scripts` folder)
-- Parameter files used for the paper (`parameter_files` folder)
 
 ### Packages required
 This work was carried out on R version 4.04 (R Core Team 2021)
 - `rlist` (v0.4.6.2) - save and load simulations
 - `RColorBrewer` (v1.1.2) - color generation
 - `igraph` (v1.2.10) - display networks
-
-### Simple launch
-with `Launch_GeneRation.R` and `GeneRation_Fun_v1.R` in the same folder.
-```
-./Launch_GeneRation.R
-```
-will launch a stand-alone default simulation. </br>
-will return a dated folder `MMDD_HHMMSS_simulation` containing 8 files:
-- `MMDD_HHMMSS_simulation.00.graphall.png` - Various graphs summarizing the evolution using the population mean: fitness, phenotype and genotype (regulatory and coding).
-- `MMDD_HHMMSS_simulation.01.WInit.png` - Initial mean individual's genotype (table and network)
-- `MMDD_HHMMSS_simulation.02.WFinal.png` - Evolved mean individual's genotype (table and network)
-- `MMDD_HHMMSS_simulation.03.WFinale_Kinetics.png` - Evolved mean individual development and phenotype
-- `MMDD_HHMMSS_simulation.finalpop.rds` - Final (evolved) population Rlist
-- `MMDD_HHMMSS_simulation.initialpop.rds` - Initial population Rlist - clonal population in our simulations
-- `MMDD_HHMMSS_simulation.param` - Parameter file used for evolution
-- `MMDD_HHMMSS_simulation.table` - Generation by generation evolution table summary: id, generation, mean population (pop) phenotype, mean pop genotype, mean pop fitness
-
-### Specific launch
-Note that all launch parameters are independant and facultative.
-```
-./Launch_GeneRation.R -p param_file -o output_name -ipop MMDD_HHMMSS_simulation.finalpop.rds
-```
-- `-p` for the specific parameter file to be used - default is generated automatically, 5 genes, 2 under selection, 100 generations for a population of 100 individuals. To modify it or more details, see the [parameter files](parameter_files) folder.
-- `-o` for the specified output name - default is "simulation".
-- `-ipop` for a specific .rds population to use as first generation for the subsequent evolution (often the final population of another simulation) - default is an automatically generated heterogeneous (non-clonal) population.
-- `-fun` for a specific functions' file - default is `GeneRation_Fun_v1.R`.
+- `MASS` (v7.3.53.1) - fits for degree distributions
 
 
-### Other notes
-- Launch Burnin - using `Launch_BurninGeneRation.R`: a first simulation is launched, then two expression optima are changed in a new param files (new second environment) and a new folder is created in the very folder containing the simulation for adaptation to the first environment.
+### Reproduction of the results:
+- Make sure R has the packages installed.
+- Launch simulations: In bash, use `cd /SIMULATIONS` to move to the correct directory and launch `sh ../0-run_simulations.sh`, which will launch 9 small simulations labeled "TUTO_SIMUS"
+- Extract simu features and isolate successful ones (`1-data_extract_from_simus.R`)
+- Carry out mutation tests (`2-run_mutation_tests.R`)
+- Plot figure 2: check and plot simu, fit and plot degree (`3-Plot_fig2.R`)
+- Plot figure 3: compare adaptation profiles (`4-Plot_fig3.R`)
+- Plot figure 4: Plot fitness effects (`5-Plot-fig4.R`)
+- Plot figure 5: Plot cis-effects and pleiotropy (`6-Plot-fig5.R`)
+- Plot figure 6: Enrichment analysis (`7-Plot-fig6.R`)
 
-### Other folders
-- **Parameter files detail**: see the [parameter files](parameter_files) folder. </br>
-  It contains the 3 sets of parameter files used to obtain the 3 topologies described in the article, as well as a detail account of each parameter used in the model.
-- **Reproduction of the results / data pipeline** : see the [Data analysis scripts](Data_Analysis_scripts) folder.</br>
-  It contains an archived with a main R script used to recapitulate the computational workflow followed to generate the various mutations types, compute their impacts, and plot the results.
-- **For a small tutorial and useful functions**, see the [Notebook and useful functions](Notebook_&_useful_functions) folder.</br>
+### Notes: 
+- Figure 1 is the materials and methods figures, so not part of the results reproduction.
+- Simulations are placed in the `/SIMUALTIONS` folder
+- Results extracted from the simulations and mutation tests are placed in the `/Extracted_data` folder
+- Generated figures are placed on the `/figures` folder
+- The USED_DATA archive contains the data used in the paper, which can be used to recapitulate the figures of the paper based on the above scripts.
+- Find more details on data structure and parameter files in the `/src` readme - It contains the 3 sets of parameter files used to obtain the 3 topologies described in the article, as well as a detail account of each parameter used in the model.
+- **For a small tutorial and useful functions**, see the [Playground](Notebook_&_useful_functions) folder.</br>
   It contains a step by step template R script to get familiar with the treatment of the data generated from the simulations. Two simulation outputs are also included.
-
-NB: Each subfolder has a corresponding README which will provide additional detail.
-
----
-
-### License
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />Ce(tte) œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International</a>.
+- Each subfolder has a corresponding README which will provide additional detail.
