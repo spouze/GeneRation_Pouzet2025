@@ -1,8 +1,8 @@
 # GeneRation software for Pouzet2025
 
 This repository contains codes for the modified Wagner's model of Gene Regulatory Networks Evolution used in [Pouzet & Le Rouzic 2025 - Evolution](https://academic.oup.com/evolut/advance-article-abstract/doi/10.1093/evolut/qpaf068/8132774): "Gene network topology drives the mutational landscape of gene expression" (previously on [BioRxiv](https://www.biorxiv.org/content/10.1101/2024.11.28.625874v1)).
-- This github repository is `https://github.com/spouze/GeneRation_Pouzet2025/`.
-- The Dryad corresponding repository is `https://doi.org/10.5061/dryad.2fqz61312`.
+- This github repository is `https://github.com/spouze/GeneRation_Pouzet2025/` ([here](https://github.com/spouze/GeneRation_Pouzet2025/)).
+- The Dryad corresponding repository is `https://doi.org/10.5061/dryad.2fqz61312` ([here](https://doi.org/10.5061/dryad.2fqz61312)).
 
 
 ### Packages required
